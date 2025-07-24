@@ -11,3 +11,4 @@ langgraph>=0.0.5
 python-dotenv>=1.0.0
 pytest-asyncio
 langchain_huggingface
+pytest-cov
