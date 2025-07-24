@@ -5,6 +5,7 @@ from langchain.docstore.document import Document
 from app.agents.orchestrator import Orchestrator, AgentState
 from app.agents.retriever import RetrieverAgent
 from app.agents.responder import ResponderAgent
+import os
 
 @pytest.fixture
 def mock_agents():
@@ -55,7 +56,9 @@ class TestIntegration:
 
     @pytest.mark.asyncio
     async def test_process_query_failure(self, orchestrator):
-       
+    
+      
+
         mock_workflow = AsyncMock()
         mock_workflow.ainvoke.side_effect = Exception("Test error")
         orchestrator.workflow = mock_workflow
