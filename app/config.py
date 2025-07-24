@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     MAX_RETRY: int = int(os.getenv("MAX_RETRY", 3))
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
   
+  
 
 settings = Settings()
 
